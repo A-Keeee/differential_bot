@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sdf version='1.7'>
+  <world name='default'>
+
+    <!-- 添加标准的光源和地面 -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- 保留您原来的定向光设置 -->
+    <light type='directional' name='direct_light'>
+      <visualize>false</visualize>
+      <cast_shadows>true</cast_shadows>
+      <pose>14.6 7.9 10 0 0 0</pose>
+      <diffuse>1.0 1.0 1.0 1</diffuse>
+      <specular>0.5 0.5 0.5 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>0 0 -1</direction>
+    </light>
+
+    <!-- 保留您要加载的核心模型 -->
+    <model name='rmuc_2025'>
+      <include>
+        <uri>model://rmuc_2025</uri>
+      </include>
+      <pose>0.0 0.0 0 0 0 0</pose>
+      <static>true</static>
+    </model>
+
+  </world>
+</sdf>
+

@@ -21,6 +21,7 @@ def generate_launch_description():
     declare_map_file_path_cmd = DeclareLaunchArgument(
         name='map_file_path',
         default_value='./src/robot_simulation/maps/house_map.yaml',
+        # default_value='./src/robot_simulation/maps/rmuc_2025.yaml',
         description='Path to the map file')
 
     declare_use_sim_time_cmd = DeclareLaunchArgument(
